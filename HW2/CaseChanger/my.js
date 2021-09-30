@@ -11,4 +11,5 @@ function changeCase(str){
     console.log(changedStr)
 }
 
-
+// Гуд працює
+// Зауваження по стилю - час від часу забуваєш крапку з комою
