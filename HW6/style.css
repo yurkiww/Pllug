@@ -1,3 +1,22 @@
-*{
-    color: aqua;
+body{
+    display: flex;
+    flex-direction: column;
 }
+*{
+    width: 30vw;
+    box-sizing: border-box;
+}
+.button{
+    height: 30px;
+    width: 70px;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+  }
+
+  .com{
+      display: flex;
+    flex-direction: column;
+
+  }

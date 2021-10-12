@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-        
-    <script src="my.js"></script>
+    <form  action="" name="form">
+
+        <input required   minlength="3" maxlength="24" name="nickname" type="text">
+        <input required minlength="1" maxlength="100" name="name" type="text">
+        <textarea minlength="1" maxlength="1000" required class="textarea" name="comment" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="Send" onclick="doAll(document.form.nickname,document.form.name,document.form.comment);return false">
+            
+        </form>
+       
+        <script src="./my.js"  ></script>
 </body>
 </html>

@@ -1,21 +1,52 @@
-// Текстове поле (input) - nickname. Якщо хоч одна умова не виконується, додати червону рамку цьому текстовому полю, умови:
-// довжина мінімум 3 символа (включно), максимум 24 символа (включно)
-// мінімум 1 буква
-// За допомогою JavaScript дозвольте вводити тільки букви (англійські)  і цифри.
+// Доволі шакально зроблено як на мене, не все дороблено, але з горем пополам воно якось та працює
+// Мав трабли з дедлайнами, пострараюсь такого не допускати
 
-// Текстове поле (input) - name. Якщо хоч одна умова не виконується, додати червону рамку цьому текстовому полю, умови:
-// довжина мінімум 1(включно), максимум 100 (включно)
-// За допомогою JavaScript дозвольте вводити тільки букви (англійські).
 
-// Текстове поле (textarea) - comment:
-// довжина мінімум 1 (включно),  максимум 1000(включно)
-// За допомогою JavaScript дозвольте вводити тільки букви (англійські), а також наступні символи .,!?- і пробіли.
+let el = document.querySelector(".com")
 
-// 4. Кнопка “Add comment”:
-// додає блок з коментарем у наступному форматі:
-// 	nickname - name
-// 	comment
-// додати блок з коментарем можна тільки тоді коли всі поля заповнені і відповідають попередньо описаним вимогам
-// якщо поля не заповнені, то кнопка має бути виключена (disabled)
-// блок з коментарем додає на початку списку коментарів
-// Спочатку логіка, потім оформлення за бажанням.
+function validateName(inputtxt){ 
+    let letters = /^[0-9a-zA-Z]+$/;
+
+      if(inputtxt.value.match(letters) && inputtxt.value.length >= 3 && inputtxt.value.length <= 24 ){
+             return true;
+      }else{
+            return false;
+        }
+      }
+
+
+      
+function validateNickname(inputtxt){ 
+      let letters = /^[A-Za-z]+$/;
+    if(inputtxt.value.match(letters) && inputtxt.value.length >= 1 && inputtxt.value.length <= 100){
+           return true;
+    }else{
+          return false;
+      }
+    }
+
+    function validateComment(inputtxt){ 
+        if(inputtxt.value.length >= 1 && inputtxt.value.length <= 1000){
+               return true;
+        }else{
+              return false;
+          }
+        }
+
+function doAll(a,b,c){
+    validateNickname(a)
+    validateName(b)
+    validateComment(c)
+    
+    if(validateNickname(a)&& validateName(b) && validateComment(c)){
+        let newComment = document.createElement("div");
+        document.body.after(newComment)
+        newComment.insertAdjacentHTML('afterbegin',c.value+" ");
+        let br = document.createElement("br");
+        document.body.after(br)
+        newComment.insertAdjacentHTML('afterbegin',b.value+" ");
+        newComment.insertAdjacentHTML('afterbegin',a.value+"-");
+    }
+    document.form.reset();
+}
+
