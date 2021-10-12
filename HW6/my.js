@@ -5,7 +5,7 @@
 
 let el = document.querySelector(".com")
 
-function validateName(inputtxt){ 
+function validateName(inputtxt){ //юзай camelCase коли називаєш змінні
     let letters = /^[0-9a-zA-Z]+$/;
 
       if(inputtxt.value.match(letters) && inputtxt.value.length >= 3 && inputtxt.value.length <= 24 ){
@@ -15,6 +15,13 @@ function validateName(inputtxt){
         }
       }
 
+//ой відступи попердолило
+//функцію можна спростити трохи до
+
+function validateNameExample(inputtxt){ 
+  let letters = /^[0-9a-zA-Z]+$/;
+  return inputtxt.value.match(letters) && inputtxt.value.length >= 3 && inputtxt.value.length <= 24;
+}
 
       
 function validateNickname(inputtxt){ 
@@ -33,6 +40,7 @@ function validateNickname(inputtxt){
               return false;
           }
         }
+//функція не перевіряє символи
 
 function doAll(a,b,c){
     validateNickname(a)
@@ -50,4 +58,11 @@ function doAll(a,b,c){
     }
     document.form.reset();
 }
+
+// Загалом - дійсно шакально) Я пробував перевіряти, але дуже багато зауважень.
+// Частина завдань не зроблена взагалі, в тих, що зроблені - теж не все є повністю.
+// Дуже погана якість коду, видно, що писалося поспіхом
+// Рекомендую сісти і переписати це все нормально з нуля, коли в тебе буде вільний час
+// Можеш потім, як зробиш, навіть мене пінганути, постараюся подивитися ще раз,
+// але зараз оціню те, що є
 
