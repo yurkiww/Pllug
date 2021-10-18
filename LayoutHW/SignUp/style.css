@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+.left-block{
+    width: 50vw;
+    background: url('./img/healthBG.png') center center
+    no-repeat;
+}
+.health{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20%;
+    color:white;
+    font-size: 50px;
+}
+.header{
+    margin-bottom:15% ;
+}
+.title{
+    font-size: 24px;
+    margin-bottom: 6%;
+}
+.text{
+    font-size: 16px;
+}
+.header::first-letter{
+    color: #E2222D;
+}
+.right-block{
+    width: 50vw;
+    display: flex;
+}
+
+.signUp{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+input{
+    border: 1px solid #DBDFEB;
+    border-radius: 8px;
+    width: 23vw;
+    height: 4.6vh;
+    padding: 0 0 0 16px;
+    margin: 10px 0 0 0;
+   
+}
+
+.signUp p {
+    color: #181C32;
+    font-weight: bold;
+    font-size: 13px;
+    
+}
+.signUp div{
+    margin: 30px 0 0 0;
+}
+.signUp__title p{
+    font-size: 36px;
+    color: #8D8DA5;
+}
+.signUp__title{
+    padding: 0 0 60px 0;
+}
+.button{
+   
+    display: flex;
+}
+.button img{
+    margin: 30px auto 0;
+    
+}
+.link{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+   
+}
+.link a{
+    color: #181C32;
+    font-weight: bold;
+
+
+}
+@media screen and (max-width: 1500px) {
+
+    input{
+        width: 35vw;
+    }
+    }
+
+@media screen and (max-width: 1200px) {
+ 
+    .health{
+        margin: 50% auto 0;
+    }
+   
+  }
+
+  @media screen and (max-width: 768px) {
+ 
+    .main{
+        flex-direction: column;
+    }
+    .left-block,.right-block{
+        width: 100vw;
+    }
+    .health{
+        margin: 20px auto 20px;
+    }
+    .header{
+        margin: 0 0 30px 0;
+    }
+    input{
+        width: 80vw;
+    }
+    .signUp__title{
+        padding: 0;
+    }
+    .left-block{
+        background-size: 100%;
+    }
+  }
